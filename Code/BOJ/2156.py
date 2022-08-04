@@ -1,4 +1,3 @@
-
 from collections import deque
 import math
 import heapq
@@ -22,7 +21,13 @@ INF = float('inf')
 N = int(input())
 data = [0] + [int(input()) for _ in range(N)]
 
+
+if N <= 2:
+    print(sum(data))
+    exit(0)
+
 DP = [0] * (N+1)
+
 
 DP[1] = data[1]
 DP[2] = data[1] + data[2]
