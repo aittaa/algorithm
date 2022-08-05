@@ -19,3 +19,13 @@ INF = float('inf')
 
 ###
 
+k, s, t = map(int, input().split())
+
+st = "ABC"
+
+for i in range(2, k+1):
+    st = "A"+ st + "B" + st + "C"
+
+
+
+print(st[s-1:t])
