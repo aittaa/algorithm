@@ -18,18 +18,21 @@ INF = float('inf')
 
 ###
 
-S = input()
+A, B, C, D, E = map(int, input().split())
 
-col = ["000", "111", "222", "333", "444", "555", "666", "777", "888", "999"]
+d = []
 
-maxCol = -1
+d.append(A)
+d.append(B)
+d.append(C)
+d.append(D)
+d.append(E)
+
+s = set()
+s = set(d)
 
 
-for i in range(len(col)):
-    if col[i] in S:
-        maxCol = i
-
-if maxCol != -1:
-    print(col[maxCol])
+if len(s) == 2 and (d.count(d[1]) == 2 or d.count(d[1]) == 3):
+    print("Yes")
 else:
-    print(maxCol)
+    print("No")
